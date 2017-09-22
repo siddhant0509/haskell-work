@@ -14,3 +14,6 @@ second _ = error "Nope"
 msecond:: [a] -> Maybe a
 msecond (_:x:_) = Just x
 msecond _ = Nothing
+
+nodesAreSame (Branch a _ _) (Branch b _ _) | a == b = Just a
+nodesAreSame _ _ = Nothing
